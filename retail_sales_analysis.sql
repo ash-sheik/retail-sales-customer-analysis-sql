@@ -47,9 +47,10 @@ CREATE TABLE customers (
 );
 CREATE TABLE products (
     product_id INT PRIMARY KEY,
+    category_id INT NOT NULL,
     product_name VARCHAR(100) NOT NULL,
-    category VARCHAR(50),
-    price DECIMAL(10,2) NOT NULL
+    unit_price DECIMAL(10,2) NOT NULL,
+    stock_quantity INT
 );
 CREATE TABLE orders (
     order_id INT PRIMARY KEY,
