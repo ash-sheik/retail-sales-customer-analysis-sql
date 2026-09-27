@@ -73,28 +73,21 @@ CREATE TABLE payments (
     amount DECIMAL(10,2) NOT NULL
 );
 -- ============================================================
--- 3. INSERT SAMPLE DATA
+-- 3. TABLE RELATIONSHIPS
 -- ============================================================
 
-INSERT INTO customers
-(customer_id, customer_name, gender, city, state, signup_date)
-VALUES
-(1, 'Aarav Sharma', 'Male', 'Bengaluru', 'Karnataka', '2025-01-10'),
-(2, 'Ananya Nair', 'Female', 'Kochi', 'Kerala', '2025-02-15'),
-(3, 'Rohan Mehta', 'Male', 'Mumbai', 'Maharashtra', '2025-03-05'),
-(4, 'Priya Iyer', 'Female', 'Chennai', 'Tamil Nadu', '2025-03-20'),
-(5, 'Aditya Rao', 'Male', 'Bengaluru', 'Karnataka', '2025-04-12'),
-(6, 'Meera Menon', 'Female', 'Kochi', 'Kerala', '2025-05-08'),
-(7, 'Rahul Verma', 'Male', 'Mumbai', 'Maharashtra', '2025-06-18'),
-(8, 'Sneha Reddy', 'Female', 'Hyderabad', 'Telangana', '2025-07-02');
-INSERT INTO products
-(product_id, product_name, category, price)
-VALUES
-(101, 'Wireless Mouse', 'Electronics', 799.00),
-(102, 'Bluetooth Headphones', 'Electronics', 1999.00),
-(103, 'Laptop Backpack', 'Accessories', 1499.00),
-(104, 'Smart Watch', 'Electronics', 3499.00),
-(105, 'Running Shoes', 'Footwear', 2499.00),
-(106, 'Casual T-Shirt', 'Clothing', 899.00),
-(107, 'Water Bottle', 'Accessories', 599.00),
-(108, 'Sports Jacket', 'Clothing', 2999.00);
+ALTER TABLE products
+ADD CONSTRAINT fk_products_category
+FOREIGN KEY (category_id) REFERENCES categories(category_id);
+
+ALTER TABLE orders
+ADD CONSTRAINT fk_orders_customer
+FOREIGN KEY (customer_id) REFERENCES customers(customer_id);
+
+ALTER TABLE orders
+ADD CONSTRAINT fk_orders_product
+FOREIGN KEY (product_id) REFERENCES products(product_id);
+
+ALTER TABLE payments
+ADD CONSTRAINT fk_payments_order
+FOREIGN KEY (order_id) REFERENCES orders(order_id);
