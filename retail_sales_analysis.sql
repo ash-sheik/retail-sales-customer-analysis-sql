@@ -38,9 +38,12 @@ CREATE TABLE customers (
     customer_id INT PRIMARY KEY,
     customer_name VARCHAR(100) NOT NULL,
     gender VARCHAR(10),
+    age INT,
     city VARCHAR(50),
     state VARCHAR(50),
-    signup_date DATE
+    country VARCHAR(50),
+    email VARCHAR(100),
+    phone VARCHAR(20)
 );
 CREATE TABLE products (
     product_id INT PRIMARY KEY,
