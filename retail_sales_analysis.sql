@@ -64,6 +64,14 @@ CREATE TABLE orders (
     quantity INT NOT NULL,
     total_amount DECIMAL(10,2) NOT NULL
 );
+CREATE TABLE payments (
+    payment_id INT PRIMARY KEY,
+    order_id INT NOT NULL,
+    payment_date DATE,
+    payment_method VARCHAR(50),
+    payment_status VARCHAR(20),
+    amount DECIMAL(10,2) NOT NULL
+);
 -- ============================================================
 -- 3. INSERT SAMPLE DATA
 -- ============================================================
