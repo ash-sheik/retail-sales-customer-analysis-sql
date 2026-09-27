@@ -10,3 +10,10 @@
 -- customer purchasing behavior, product performance, and
 -- geographical sales trends using SQL.
 -- ============================================================
+-- ============================================================
+-- 1. DATABASE SETUP
+-- ============================================================
+
+CREATE DATABASE retail_sales_analysis;
+
+USE retail_sales_analysis;
