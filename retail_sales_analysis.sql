@@ -61,3 +61,14 @@ VALUES
 (6, 'Meera Menon', 'Female', 'Kochi', 'Kerala', '2025-05-08'),
 (7, 'Rahul Verma', 'Male', 'Mumbai', 'Maharashtra', '2025-06-18'),
 (8, 'Sneha Reddy', 'Female', 'Hyderabad', 'Telangana', '2025-07-02');
+INSERT INTO products
+(product_id, product_name, category, price)
+VALUES
+(101, 'Wireless Mouse', 'Electronics', 799.00),
+(102, 'Bluetooth Headphones', 'Electronics', 1999.00),
+(103, 'Laptop Backpack', 'Accessories', 1499.00),
+(104, 'Smart Watch', 'Electronics', 3499.00),
+(105, 'Running Shoes', 'Footwear', 2499.00),
+(106, 'Casual T-Shirt', 'Clothing', 899.00),
+(107, 'Water Bottle', 'Accessories', 599.00),
+(108, 'Sports Jacket', 'Clothing', 2999.00);
