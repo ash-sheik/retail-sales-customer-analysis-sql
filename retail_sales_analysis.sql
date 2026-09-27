@@ -46,3 +46,18 @@ CREATE TABLE orders (
     FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
     FOREIGN KEY (product_id) REFERENCES products(product_id)
 );
+-- ============================================================
+-- 3. INSERT SAMPLE DATA
+-- ============================================================
+
+INSERT INTO customers
+(customer_id, customer_name, gender, city, state, signup_date)
+VALUES
+(1, 'Aarav Sharma', 'Male', 'Bengaluru', 'Karnataka', '2025-01-10'),
+(2, 'Ananya Nair', 'Female', 'Kochi', 'Kerala', '2025-02-15'),
+(3, 'Rohan Mehta', 'Male', 'Mumbai', 'Maharashtra', '2025-03-05'),
+(4, 'Priya Iyer', 'Female', 'Chennai', 'Tamil Nadu', '2025-03-20'),
+(5, 'Aditya Rao', 'Male', 'Bengaluru', 'Karnataka', '2025-04-12'),
+(6, 'Meera Menon', 'Female', 'Kochi', 'Kerala', '2025-05-08'),
+(7, 'Rahul Verma', 'Male', 'Mumbai', 'Maharashtra', '2025-06-18'),
+(8, 'Sneha Reddy', 'Female', 'Hyderabad', 'Telangana', '2025-07-02');
