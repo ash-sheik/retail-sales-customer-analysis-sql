@@ -2,13 +2,26 @@
 -- RETAIL SALES PERFORMANCE & CUSTOMER ANALYSIS
 -- ============================================================
 -- Author: Ashiba B
--- Tool: MySQL
--- Project Type: Data Analysis / SQL Portfolio Project
+-- Database: MySQL
+-- Tool: MySQL Workbench
+-- Project Type: SQL Data Analytics Portfolio Project
 --
--- Objective:
--- Analyze retail sales data to understand revenue performance,
--- customer purchasing behavior, product performance, and
--- geographical sales trends using SQL.
+-- Project Objective:
+-- Analyze retail sales, customer behavior, product performance,
+-- category performance, and payment data using SQL to generate
+-- meaningful business insights.
+--
+-- Key Areas of Analysis:
+-- 1. Overall sales performance
+-- 2. Monthly sales trends
+-- 3. Product performance
+-- 4. Category performance
+-- 5. Customer purchasing behavior
+-- 6. State-wise sales performance
+-- 7. Payment performance
+-- 8. Inactive customer identification
+-- 9. Customer segmentation
+-- 10. Month-over-month sales growth
 -- ============================================================
 -- ============================================================
 -- 1. DATABASE SETUP
