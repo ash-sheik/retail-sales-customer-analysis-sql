@@ -45,6 +45,10 @@ CREATE TABLE customers (
     email VARCHAR(100),
     phone VARCHAR(20)
 );
+CREATE TABLE categories (
+    category_id INT PRIMARY KEY,
+    category_name VARCHAR(100) NOT NULL
+);
 CREATE TABLE products (
     product_id INT PRIMARY KEY,
     category_id INT NOT NULL,
@@ -52,10 +56,7 @@ CREATE TABLE products (
     unit_price DECIMAL(10,2) NOT NULL,
     stock_quantity INT
 );
-CREATE TABLE categories (
-    category_id INT PRIMARY KEY,
-    category_name VARCHAR(100) NOT NULL
-);
+
 -- ============================================================
 -- 3. INSERT SAMPLE DATA
 -- ============================================================
