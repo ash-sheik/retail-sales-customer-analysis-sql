@@ -56,7 +56,14 @@ CREATE TABLE products (
     unit_price DECIMAL(10,2) NOT NULL,
     stock_quantity INT
 );
-
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY,
+    customer_id INT NOT NULL,
+    product_id INT NOT NULL,
+    order_date DATE NOT NULL,
+    quantity INT NOT NULL,
+    total_amount DECIMAL(10,2) NOT NULL
+);
 -- ============================================================
 -- 3. INSERT SAMPLE DATA
 -- ============================================================
