@@ -159,3 +159,18 @@ JOIN categories c
 GROUP BY c.category_id, c.category_name
 ORDER BY total_revenue DESC;
 
+-- ============================================================
+-- 8. CUSTOMER PURCHASING BEHAVIOR
+-- ============================================================
+
+SELECT
+    c.customer_id,
+    c.customer_name,
+    COUNT(DISTINCT o.order_id) AS total_orders,
+    SUM(o.quantity) AS total_items_purchased,
+    ROUND(SUM(o.total_amount), 2) AS total_spent
+FROM customers c
+JOIN orders o
+    ON c.customer_id = o.customer_id
+GROUP BY c.customer_id, c.customer_name
+ORDER BY total_spent DESC;
