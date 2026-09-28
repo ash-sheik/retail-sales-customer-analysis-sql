@@ -115,3 +115,15 @@ FROM customers;
 SELECT 
     ROUND(AVG(total_amount), 2) AS average_order_value
 FROM orders;
+
+-- ============================================================
+-- 5. MONTHLY SALES TREND
+-- ============================================================
+
+SELECT
+    DATE_FORMAT(order_date, '%Y-%m') AS sales_month,
+    COUNT(DISTINCT order_id) AS total_orders,
+    ROUND(SUM(total_amount), 2) AS monthly_revenue
+FROM orders
+GROUP BY DATE_FORMAT(order_date, '%Y-%m')
+ORDER BY sales_month;
