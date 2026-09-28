@@ -91,3 +91,27 @@ FOREIGN KEY (product_id) REFERENCES products(product_id);
 ALTER TABLE payments
 ADD CONSTRAINT fk_payments_order
 FOREIGN KEY (order_id) REFERENCES orders(order_id);
+
+-- ============================================================
+-- 4. SALES OVERVIEW
+-- ============================================================
+
+-- Total Revenue
+SELECT 
+    ROUND(SUM(total_amount), 2) AS total_revenue
+FROM orders;
+
+-- Total Orders
+SELECT 
+    COUNT(DISTINCT order_id) AS total_orders
+FROM orders;
+
+-- Total Customers
+SELECT 
+    COUNT(*) AS total_customers
+FROM customers;
+
+-- Average Order Value
+SELECT 
+    ROUND(AVG(total_amount), 2) AS average_order_value
+FROM orders;
