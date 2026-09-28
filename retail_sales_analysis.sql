@@ -217,4 +217,21 @@ LEFT JOIN orders o
 WHERE o.order_id IS NULL
 ORDER BY c.customer_id;
 
+-- ============================================================
+-- 12. CUSTOMER SEGMENTATION
+-- ============================================================
 
+SELECT
+    c.customer_id,
+    c.customer_name,
+    ROUND(SUM(o.total_amount), 2) AS total_spent,
+    CASE
+        WHEN SUM(o.total_amount) >= 50000 THEN 'High Value'
+        WHEN SUM(o.total_amount) >= 20000 THEN 'Medium Value'
+        ELSE 'Low Value'
+    END AS customer_segment
+FROM customers c
+JOIN orders o
+    ON c.customer_id = o.customer_id
+GROUP BY c.customer_id, c.customer_name
+ORDER BY total_spent DESC;
