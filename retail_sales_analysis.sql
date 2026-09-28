@@ -189,3 +189,15 @@ JOIN orders o
     ON c.customer_id = o.customer_id
 GROUP BY c.state
 ORDER BY total_revenue DESC;
+
+-- ============================================================
+-- 10. PAYMENT PERFORMANCE
+-- ============================================================
+
+SELECT
+    payment_method,
+    COUNT(DISTINCT payment_id) AS total_transactions,
+    ROUND(SUM(amount), 2) AS total_payment_amount
+FROM payments
+GROUP BY payment_method
+ORDER BY total_payment_amount DESC;
