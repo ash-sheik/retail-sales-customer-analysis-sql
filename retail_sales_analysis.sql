@@ -217,3 +217,4 @@ LEFT JOIN orders o
 WHERE o.order_id IS NULL
 ORDER BY c.customer_id;
 
+
