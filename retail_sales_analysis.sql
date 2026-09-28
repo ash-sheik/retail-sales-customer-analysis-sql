@@ -201,3 +201,18 @@ SELECT
 FROM payments
 GROUP BY payment_method
 ORDER BY total_payment_amount DESC;
+
+-- ============================================================
+-- 11. INACTIVE CUSTOMERS
+-- ============================================================
+
+SELECT
+    c.customer_id,
+    c.customer_name,
+    c.city,
+    c.state
+FROM customers c
+LEFT JOIN orders o
+    ON c.customer_id = o.customer_id
+WHERE o.order_id IS NULL
+ORDER BY c.customer_id;
