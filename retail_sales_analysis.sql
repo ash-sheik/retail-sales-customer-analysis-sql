@@ -174,3 +174,18 @@ JOIN orders o
     ON c.customer_id = o.customer_id
 GROUP BY c.customer_id, c.customer_name
 ORDER BY total_spent DESC;
+
+-- ============================================================
+-- 9. STATE-WISE SALES PERFORMANCE
+-- ============================================================
+
+SELECT
+    c.state,
+    COUNT(DISTINCT o.order_id) AS total_orders,
+    COUNT(DISTINCT c.customer_id) AS total_customers,
+    ROUND(SUM(o.total_amount), 2) AS total_revenue
+FROM customers c
+JOIN orders o
+    ON c.customer_id = o.customer_id
+GROUP BY c.state
+ORDER BY total_revenue DESC;
