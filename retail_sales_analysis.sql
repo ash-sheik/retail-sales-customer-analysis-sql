@@ -151,4 +151,3 @@ SELECT
 FROM orders
 GROUP BY DATE_FORMAT(order_date, '%Y-%m')
 ORDER BY sales_month;
-
