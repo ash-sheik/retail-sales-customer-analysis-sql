@@ -127,3 +127,17 @@ SELECT
 FROM orders
 GROUP BY DATE_FORMAT(order_date, '%Y-%m')
 ORDER BY sales_month;
+
+-- ============================================================
+-- 6. PRODUCT PERFORMANCE
+-- ============================================================
+
+SELECT
+    p.product_name,
+    SUM(o.quantity) AS total_units_sold,
+    ROUND(SUM(o.total_amount), 2) AS total_revenue
+FROM orders o
+JOIN products p
+    ON o.product_id = p.product_id
+GROUP BY p.product_id, p.product_name
+ORDER BY total_revenue DESC;
