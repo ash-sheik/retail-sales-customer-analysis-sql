@@ -50,11 +50,11 @@ Primary and foreign key constraints connect products to categories, orders to cu
 3. Execute the script from the beginning to create the database, tables, relationships and queries.
 4. Review the result sets for each business question.
 
-The script expects the relevant source data to be loaded into the created tables before the analysis queries are run. No dataset is currently included in this repository.
+The SQL script includes a small synthetic dataset (fictional customers, products, orders and payments), so the analysis queries can be executed end-to-end immediately. The sample records are for demonstration only and do not represent real customers or business activity.
 
 ## Notes
 
-This repository contains the SQL implementation. Add a data dictionary, source dataset attribution, query-result screenshots and validated business findings before treating numerical results as portfolio claims.
+This repository contains the schema, synthetic seed data and analysis queries in one script. The sample figures are illustrative, not real business findings. A next improvement would be adding a data dictionary and query-result screenshots.
 
 ## Author
 
