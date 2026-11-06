@@ -108,7 +108,8 @@ VALUES
 (5, 'Ishaan Das', 'Male', 38, 'Kolkata', 'West Bengal', 'India', 'customer5@example.com', '0000000005'),
 (6, 'Meera Iyer', 'Female', 31, 'Chennai', 'Tamil Nadu', 'India', 'customer6@example.com', '0000000006'),
 (7, 'Rohan Patel', 'Male', 45, 'Ahmedabad', 'Gujarat', 'India', 'customer7@example.com', '0000000007'),
-(8, 'Sara Khan', 'Female', 23, 'Pune', 'Maharashtra', 'India', 'customer8@example.com',', '0000000008');
+(8, 'Sara Khan', 'Female', 23, 'Pune', 'Maharashtra', 'India', 'customer8@example.com', '0000000008'),
+(9, 'Nikhil Bose', 'Male', 36, 'Jaipur', 'Rajasthan', 'India', 'customer9@example.com', '0000000009');
 
 INSERT INTO categories (category_id, category_name)
 VALUES
